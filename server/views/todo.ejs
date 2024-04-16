@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <%- include('partials/navbar') -%>
+  <main class="container">
+    <h1>Todos</h1>
+
+    <div id="todos">
+      <ul id="todo-list"></ul>
+    </div>
+    <%- include('scripts/fetchTodos.ejs') -%>
+    <style>
+      .container {
+        display: flex;
+        flex-direction: column;
+        place-items: center;
+      }
+      .todo-item {
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+      }
+      .todo-data {
+        margin: 10px;
+      }
+    </style>
+  </main>
+</body>
+</html>
