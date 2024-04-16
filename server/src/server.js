@@ -4,6 +4,8 @@ const app = express();
 const PORT = 4000;
 app.set("view engine", "ejs")
 
+app.use(express.static('static'))
+
 app.get('/', (req, res, next) => {
 
   res.render('index.ejs') 

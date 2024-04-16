@@ -13,7 +13,34 @@
     <div id="todos">
       <ul id="todo-list"></ul>
     </div>
+    <form class="todo-form" method="POST" action="http://localhost:5000/todos/new">
+      <label for="title">Title: 
+        <input
+          id="title-control" 
+          name="title" 
+          type="text" 
+          class="form-control"
+          placeholder="Enter Todo Title" />
+      </label>
+      <div class="row">
+      <label for="desc">Description:  </label>
+        <textarea 
+          id="desc-control"
+          name="desc"
+          type="textarea"
+          class="form-control"
+          placeholder="Enter Todo Description"
+        >
+        </textarea>
+      </div>
+      <button onclick="reload()" id="submit-btn" type="submit">Submit Todo</button>
+    </form>
     <%- include('scripts/fetchTodos.ejs') -%>
+    <script>
+    function reload() {
+      window.location.reload();
+    }
+    </script>
     <style>
       .container {
         display: flex;
@@ -28,6 +55,29 @@
       }
       .todo-data {
         margin: 10px;
+      }
+      .todo-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .form-control {
+        width: 200px;
+      }
+      #desc-control {
+        height: 100px;
+        margin-left: 5px;
+      }
+      #title-control {
+        margin-left: 46px;
+      }
+      .row {
+        display: flex;
+        flex-direction: row;
+      }
+      #submit-btn {
+        margin-top: 20px;
+        width: 100px;
       }
     </style>
   </main>
