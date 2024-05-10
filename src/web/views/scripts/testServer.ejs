@@ -1,5 +1,5 @@
-
-async function pingServer() {
+<script>
+async function testServer() {
     const target = document.querySelector('#output')
     const response = await fetch('http://localhost:5000/test');
     const test = await response.json();
@@ -8,3 +8,4 @@ async function pingServer() {
     console.log(test);
   }
 export {pingServer};
+</script>
