@@ -1,0 +1,22 @@
+<form class="todo-form" method="POST" action="http://localhost:5000/todos/new">
+  <label for="title">Title: 
+    <input
+      id="title-control" 
+      name="title" 
+      type="text" 
+      class="form-control"
+      placeholder="Enter Todo Title" />
+  </label>
+  <div class="row">
+  <label for="desc">Description:  </label>
+    <textarea 
+      id="desc-control"
+      name="desc"
+      type="textarea"
+      class="form-control"
+      placeholder="Enter Todo Description"
+    >
+    </textarea>
+  </div>
+  <button onclick="{window.location.reload()}" id="submit-btn" type="submit">Submit Todo</button>
+</form>

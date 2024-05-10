@@ -1,0 +1,10 @@
+
+async function pingServer() {
+    const target = document.querySelector('#output')
+    const response = await fetch('http://localhost:5000/test');
+    const test = await response.json();
+    let parsed = JSON.stringify(test);
+    target.innerHTML = `<p>${parsed}</p>`
+    console.log(test);
+  }
+export {pingServer};

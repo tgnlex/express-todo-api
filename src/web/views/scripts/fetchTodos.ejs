@@ -1,0 +1,19 @@
+<script>
+const fetchTodos = async () => {
+  const response = await fetch('http://localhost:5000/todos');
+  const data = await response.json();
+  const todos = JSON.parse(data);
+  console.log(data)
+  console.log(todos);
+  const list = document.querySelector('#todo-list');
+  list.innerHTML = todos.map((todo) =>     `  
+      <li class="todo-item">
+        <h2 class="todo-id todo-data">${todo.id}.</h2>
+        <h2 class="todo-title todo-data">${todo.title}</h2>
+        <p class="todo-desc todo-data">${todo.desc}</p>
+      </li>
+      `
+    )
+  }
+export {fetchTodos};
+</script>
