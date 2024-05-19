@@ -15,16 +15,20 @@
 		"paths": {
 			"react": ["./node_modules/preact/compat/"],
 			"react-dom": ["./node_modules/preact/compat/"],
+			"~/*": ["/*"],
+			"@/*": ["/src"],
 			"@lib/*": ["src/_lib/*"],
 			"@style/*": ["src/style"],
-			"@assets/*": ["src/assets/*"],
-			"@comps/*": ["src/components/*"],
-			"@pages/*": ["src/pages/*"],
-			"$workers/*": ["/workers/*"],
+			"@assets*": ["src/assets/*"],
+			"@comp/*": ["src/components/*"],
+			"@page/*": ["src/pages/*"],
+			"@worker/*": ["/workers/*"],
 		  "$public/*": ["/public/*"],
 			"$config/*": ["/config/*"],
-			"$jobs/*": ["/jobs/*"],
 			"$scripts/*":["/scripts/*"],
+			"$sw/*": ["/sw/*"],
+			"%task/*": ["../task/*"],
+			"%script/*": ["../scripts/*"]
 		}
 	},
 	"include": ["node_modules/vite/client.d.ts", "**/*"]
