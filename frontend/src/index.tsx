@@ -13,7 +13,7 @@ export function App() {
 			<main>
 				<Router>
 					<Route path="/" component={Home} />
-					<Route path="/" component={Chat} />
+					<Route path="/chat" component={Chat} />
 					<Route default component={NotFound} />
 				</Router>
 			</main>
