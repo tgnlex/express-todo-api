@@ -1,4 +1,6 @@
-function noop() {/* noop function */};
+function noop() {
+  return null;
+}
 
 function ack() {
   if (error) {
@@ -10,4 +12,5 @@ function ack() {
 
 
 
-export {noop, ack, heartbeat}
+
+export {noop, ack}
