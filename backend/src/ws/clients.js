@@ -1,4 +1,4 @@
-const clients = [];
+const clients = {};
 
 function showClients () {
   if (clients.len > 0) {
