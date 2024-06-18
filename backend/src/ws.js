@@ -10,7 +10,7 @@ const connection = (socket, clients) => {
   console.log(`${client.ip} connected`) 
   ping();
   socket.on('error', error());
-  socket.on('open', open(heartbeat.isAlive));  
+  socket.on('open', open(this.isAlive));  
   socket.on('pong', ping());
   socket.on('add user', (username), addUser(client.id, username));
   socket.on('time', timestamp());
