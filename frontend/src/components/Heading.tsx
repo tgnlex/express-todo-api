@@ -29,7 +29,6 @@ const Heading = styled(HeadingBase)`
   line-height: 1.5;
   text-align: center;
   text-emphasis: filled;
-  border: 2px solid var(--gradient);
   color: var(--grad);
 }
 
